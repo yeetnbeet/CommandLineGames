@@ -68,11 +68,12 @@ bool Menu()
     std::cout << "\nWelcome Enter 1 to play or 0 to Main Menu\n";
     std::cout << "------------------------------------------\n";
     
+    int Answer;
+    std::cin >> Answer;
     bool flag = true;
     while (flag)
     {
-        int Answer;
-        std::cin >> Answer;
+        
         if (Answer==1)
         {
             return true;
@@ -84,7 +85,8 @@ bool Menu()
         else
         {
             std::cout << "\nNo pick something 1 or 0";
-            
+            int Answer;
+            std::cin >> Answer;
             
         }
         
