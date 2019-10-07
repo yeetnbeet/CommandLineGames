@@ -87,19 +87,29 @@ bool Menu()
     
     int Answer;
     std::cin >> Answer;
-    if (Answer==1)
+    bool flag = true;
+    while (flag)
     {
-        return true;
+        
+        if (Answer==1)
+        {
+            return true;
+        }
+        if(Answer==0)
+        {
+            return false;
+        }
+        else
+        {
+            std::cout << "\nNo pick something 1 or 0\n\n";
+            std::cin >> Answer;
+            
+        }
+        
     }
-    if(Answer==0)
-    {
-        return false;
-    }
-    else
-    {
-        std::cout << "guess you are going to play regardless";
-        return true;
-    }
+    
+
+    
     
 }
 void rgam()
