@@ -84,8 +84,7 @@ bool Menu()
         }
         else
         {
-            std::cout << "\nNo pick something 1 or 0";
-            int Answer;
+            std::cout << "\nNo pick something 1 or 0\n\n";
             std::cin >> Answer;
             
         }
