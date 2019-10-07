@@ -13,20 +13,37 @@ bool PlayGame(int numbers)
     int TheNumber = rand() % numbers;
     std::cout << "\n\nEnter Your Guess\n";
 
-    int ipt;
-    std::cin >> ipt;
-
-    if(TheNumber==ipt)
+    bool Flag = true;
+    while (Flag)
     {
-        std::cout << "\n\n\n----------------------\nYou Guessed Right!\n";
-        return true;
-    }
+        int ipt;
+        std::cin >> ipt;
 
-    else
-    {
-        std::cout << "\nYou Guessed Wrong Try again!";
-        return false;
+        if(TheNumber==ipt)
+        {
+            std::cout << "\n\n\n----------------------\nYou Guessed Right!\n";
+            return true;
+        }
+
+        if(ipt>numbers)
+        {
+            std::cout << "\n number was to large try again";
+        }
+        if(ipt<0)
+        {
+            std::cout << "\n number must be greater than zero try again";
+        }
+
+
+        else
+        {
+            std::cout << "\nYou Guessed Wrong Try again!";
+            return false;
+        }
+        
     }
+    
+    
     
     
 
